@@ -1,0 +1,166 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between mb-3">
+    <h2>Employees</h2>
+
+    <button
+      id="btnAddEmployee"
+      *ngIf="auth.hasRole('Admin') || auth.hasRole('Manager')"
+      class="btn btn-primary"
+      (click)="addNew()">
+      Add Employee
+    </button>
+  </div>
+
+  <!-- Form -->
+  <div *ngIf="showForm" class="card mb-4 shadow">
+    <div class="card-body">
+      <h5>
+        {{ isEditMode ? 'Edit Employee' : 'Add Employee' }}
+      </h5>
+
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <label>Name</label>
+          <input
+            id="txtName"
+            class="form-control"
+            [(ngModel)]="model.name">
+        </div>
+
+        <div class="col-md-6">
+          <label>Primary Role</label>
+          <input
+            id="txtPrimaryRole"
+            class="form-control"
+            [(ngModel)]="model.primaryRole">
+        </div>
+
+        <div class="col-md-6">
+          <label>Skills</label>
+          <input
+            id="txtSkills"
+            class="form-control"
+            [(ngModel)]="model.skills"
+            placeholder=".NET,Angular,SQL">
+        </div>
+
+        <div class="col-md-3">
+          <label>Experience</label>
+          <input
+            id="txtExperience"
+            type="number"
+            class="form-control"
+            [(ngModel)]="model.experience">
+        </div>
+
+        <div class="col-md-3">
+          <label>Performance Score</label>
+          <input
+            id="txtPerformanceScore"
+            type="number"
+            class="form-control"
+            [(ngModel)]="model.performanceScore">
+        </div>
+
+        <div class="col-md-3">
+          <label>Allocation %</label>
+          <input
+            id="txtAllocation"
+            type="number"
+            class="form-control"
+            [(ngModel)]="model.currentAllocationPercent">
+        </div>
+
+        <div class="col-md-3">
+          <label>Success Rate</label>
+          <input
+            id="txtSuccessRate"
+            type="number"
+            class="form-control"
+            [(ngModel)]="model.successRate">
+        </div>
+
+        <div class="col-md-3 form-check mt-4 ms-3">
+          <input
+            id="chkAvailable"
+            type="checkbox"
+            class="form-check-input"
+            [(ngModel)]="model.isAvailable">
+          <label class="form-check-label">
+            Available
+          </label>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <button
+          id="btnSaveEmployee"
+          class="btn btn-success me-2"
+          (click)="save()">
+          Save
+        </button>
+
+        <button
+          id="btnCancelEmployee"
+          class="btn btn-secondary"
+          (click)="cancel()">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="card shadow">
+    <div class="card-body">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Skills</th>
+            <th>Experience</th>
+            <th>Allocation %</th>
+            <th>Performance</th>
+            <th>Available</th>
+            <th *ngIf="auth.hasRole('Admin') || auth.hasRole('Manager')">
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.primaryRole }}</td>
+            <td>{{ employee.skills }}</td>
+            <td>{{ employee.experience }}</td>
+            <td>{{ employee.currentAllocationPercent }}</td>
+            <td>
+              <span class="badge bg-success">
+                {{ employee.performanceScore }}
+              </span>
+            </td>
+            <td>
+              {{ employee.isAvailable ? 'Yes' : 'No' }}
+            </td>
+            <td *ngIf="auth.hasRole('Admin') || auth.hasRole('Manager')">
+              <button
+                class="btn btn-sm btn-warning me-2"
+                (click)="edit(employee)">
+                Edit
+              </button>
+
+              <button
+                *ngIf="auth.hasRole('Admin')"
+                class="btn btn-sm btn-danger"
+                (click)="delete(employee.id)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

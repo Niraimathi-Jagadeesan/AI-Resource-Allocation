@@ -1,0 +1,102 @@
+<div class="container mt-4">
+  <h2 class="mb-4">AI Project Risk Analysis</h2>
+
+  <!-- Project Selection -->
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <div class="row g-3 align-items-end">
+
+        <div class="col-md-8">
+          <label class="form-label">Select Project</label>
+          <select
+            class="form-select"
+            [(ngModel)]="selectedProjectId">
+
+            <option [ngValue]="0">
+              -- Select Project --
+            </option>
+
+            <option
+              *ngFor="let project of projects"
+              [ngValue]="project.id">
+              {{ project.projectName }}
+            </option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <button
+            class="btn btn-danger w-100"
+            (click)="analyzeRisk()"
+            [disabled]="loading">
+
+            {{ loading ? 'Analyzing...' : 'Analyze Risk' }}
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Risk Result -->
+  <div *ngIf="result" class="card shadow">
+    <div class="card-body">
+
+      <h4 class="mb-3">
+        {{ selectedProject?.projectName }}
+      </h4>
+
+      <!-- Risk Score -->
+      <div class="mb-3" id="riskScore">
+        <strong>Risk Score:</strong>
+        {{ result.riskScore | number:'1.0-0' }}%
+      </div>
+
+      <!-- Risk Level -->
+      <div class="mb-3" id="riskLevel">
+        <strong>Risk Level: </strong>
+        <span class="badge" [ngClass]="getRiskClass()">
+          {{ result.riskLevel }}
+        </span>
+      </div>
+
+      <!-- Summary -->
+      <div *ngIf="result.summary" class="mb-4">
+        <strong>Summary:</strong>
+        {{ result.summary }}
+      </div>
+
+      <!-- Risk Factors -->
+      <div
+        *ngIf="result.riskFactors && result.riskFactors.length > 0"
+        class="mb-4">
+
+        <h5 class="text-danger">Possible Risk Factors</h5>
+
+        <ul class="list-group">
+          <li
+            *ngFor="let factor of result.riskFactors"
+            class="list-group-item">
+            {{ factor }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Recommendations -->
+      <div
+        *ngIf="result.recommendations && result.recommendations.length > 0">
+
+        <h5 class="text-success">Recommendations</h5>
+
+        <ul class="list-group">
+          <li
+            *ngFor="let recommendation of result.recommendations"
+            class="list-group-item">
+            {{ recommendation }}
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

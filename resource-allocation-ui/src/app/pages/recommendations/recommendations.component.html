@@ -1,0 +1,97 @@
+<div class="container mt-4">
+  <h2 class="mb-4">AI Resource Recommendations</h2>
+
+  <!-- Project Selection -->
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <div class="row g-3 align-items-end">
+
+        <div class="col-md-8">
+          <label class="form-label">Select Project</label>
+          <select
+            class="form-select"
+            [(ngModel)]="selectedProjectId">
+            <option [ngValue]="0">
+              -- Select Project --
+            </option>
+            <option
+              *ngFor="let project of projects"
+              [ngValue]="project.id">
+              {{ project.projectName }}
+              ({{ project.requiredSkills }})
+            </option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <button
+            class="btn btn-primary w-100"
+            (click)="getRecommendations()"
+            [disabled]="loading">
+            {{ loading
+                ? 'Analyzing...'
+                : 'Get Recommendations' }}
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div
+    *ngIf="recommendations.length > 0"
+    class="card shadow">
+    <div class="card-body">
+      <h4 class="mb-3">Recommended Employees</h4>
+
+      <table class="table table-bordered table-hover">
+        <thead class="table-light">
+          <tr>
+            <th>Rank</th>
+            <th>Employee</th>
+            <th>Score</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr
+            *ngFor="
+              let rec of recommendations;
+              let i = index
+            ">
+            <td>
+              <span
+                class="badge bg-primary">
+                #{{ i + 1 }}
+              </span>
+            </td>
+
+            <td>{{ rec.employeeName }}</td>
+
+            <td>
+              <span
+                class="badge bg-success">
+                {{ rec.finalScore | number:'1.2-2' }}
+              </span>
+            </td>
+
+            <td>{{ rec.reason }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- No Results -->
+  <div
+    *ngIf="
+      !loading &&
+      selectedProjectId &&
+      recommendations.length === 0
+    "
+    class="alert alert-info">
+    No recommendations found for the selected project.
+  </div>
+</div>

@@ -1,0 +1,147 @@
+2026-05-12 15:24:46.696 +05:30 [ERR] Failed executing DbCommand (107ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+2026-05-12 15:35:42.531 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 260.7099 ms
+2026-05-12 15:39:22.444 +05:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 31.6174 ms
+2026-05-12 15:39:27.001 +05:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 3.9686 ms
+2026-05-12 15:39:27.136 +05:30 [INF] HTTP GET /favicon.ico responded 404 in 0.1594 ms
+2026-05-12 15:39:29.573 +05:30 [INF] HTTP GET /.well-known/appspecific/com.chrome.devtools.json responded 404 in 8.1339 ms
+2026-05-12 15:40:09.518 +05:30 [ERR] HTTP POST /api/Auth/login responded 500 in 1039.2792 ms
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '248' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at ResourceAllocation.API.Services.JwtService.GenerateToken(AppUser user) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\JwtService.cs:line 40
+   at ResourceAllocation.API.Controllers.AuthController.Login(LoginRequest request) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\AuthController.cs:line 36
+   at lambda_method15(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-12 15:40:09.613 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '248' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at ResourceAllocation.API.Services.JwtService.GenerateToken(AppUser user) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\JwtService.cs:line 40
+   at ResourceAllocation.API.Controllers.AuthController.Login(LoginRequest request) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\AuthController.cs:line 36
+   at lambda_method15(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-12 15:42:08.257 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 1063.3409 ms
+2026-05-12 15:44:29.007 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 401 in 41.8377 ms
+2026-05-12 15:45:28.062 +05:30 [INF] HTTP GET /api/Risk/1 responded 401 in 39.1141 ms
+2026-05-12 15:52:22.391 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 894.3442 ms
+2026-05-12 15:52:42.106 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 444.0441 ms
+2026-05-12 15:53:03.917 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 217.9315 ms
+2026-05-12 17:24:13.780 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 47.1131 ms
+2026-05-12 17:24:13.870 +05:30 [INF] HTTP POST /api/Auth/login responded 400 in 59.9799 ms
+2026-05-12 17:24:23.885 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.1664 ms
+2026-05-12 17:24:24.200 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 298.3299 ms
+2026-05-12 17:25:13.874 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 13.5261 ms
+2026-05-12 17:25:13.953 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 18.3904 ms
+2026-05-12 17:29:13.603 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.1192 ms
+2026-05-12 17:29:13.676 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 15.6227 ms
+2026-05-12 17:29:16.512 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 14.6029 ms
+2026-05-12 17:29:17.521 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 24.6217 ms
+2026-05-12 17:29:17.699 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 10.2229 ms
+2026-05-12 17:29:17.925 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 20.9759 ms
+2026-05-12 17:33:10.268 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.3281 ms
+2026-05-12 17:33:10.429 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 103.5658 ms
+2026-05-12 17:33:19.080 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.1433 ms
+2026-05-12 17:33:19.148 +05:30 [INF] HTTP GET /api/Employees responded 200 in 55.0605 ms
+2026-05-12 17:33:45.300 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.1134 ms
+2026-05-12 17:33:45.418 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 74.6536 ms
+2026-05-12 17:33:49.311 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.3127 ms
+2026-05-12 17:33:49.350 +05:30 [INF] HTTP GET /api/Employees responded 200 in 8.3064 ms
+2026-05-12 17:37:50.918 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.1500 ms
+2026-05-12 17:37:51.212 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 216.8982 ms
+2026-05-12 17:37:52.822 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1314 ms
+2026-05-12 17:37:52.878 +05:30 [INF] HTTP GET /api/Projects responded 200 in 40.5217 ms
+2026-05-12 17:42:42.339 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 4.2459 ms
+2026-05-12 17:42:42.682 +05:30 [INF] HTTP GET /api/Projects responded 200 in 273.7178 ms
+2026-05-12 17:42:49.261 +05:30 [INF] HTTP OPTIONS /api/Recommendation/2 responded 204 in 0.1747 ms
+2026-05-12 17:42:49.365 +05:30 [INF] HTTP GET /api/Recommendation/2 responded 200 in 88.2173 ms
+2026-05-12 17:42:58.132 +05:30 [INF] HTTP OPTIONS /api/Recommendation/2 responded 204 in 8.5017 ms
+2026-05-12 17:42:58.266 +05:30 [INF] HTTP GET /api/Recommendation/2 responded 200 in 106.9523 ms
+2026-05-12 17:43:00.711 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.1615 ms
+2026-05-12 17:43:01.058 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 330.7592 ms
+2026-05-12 17:43:04.328 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1408 ms
+2026-05-12 17:43:04.486 +05:30 [INF] HTTP GET /api/Projects responded 200 in 98.2445 ms
+2026-05-12 17:43:06.704 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.1211 ms
+2026-05-12 17:43:06.808 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 80.4619 ms
+2026-05-12 17:43:11.076 +05:30 [INF] HTTP OPTIONS /api/Recommendation/2 responded 204 in 0.1078 ms
+2026-05-12 17:43:11.173 +05:30 [INF] HTTP GET /api/Recommendation/2 responded 200 in 81.9856 ms
+2026-05-12 17:46:57.363 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1091 ms
+2026-05-12 17:46:57.500 +05:30 [INF] HTTP GET /api/Projects responded 200 in 73.7997 ms
+2026-05-12 17:47:00.293 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0885 ms
+2026-05-12 17:47:00.371 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 54.9413 ms
+2026-05-12 17:47:03.375 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.7260 ms
+2026-05-12 17:47:03.417 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 30.1891 ms
+2026-05-12 17:47:06.571 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.1199 ms
+2026-05-12 17:47:06.606 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 23.0630 ms
+2026-05-12 17:47:10.618 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0702 ms
+2026-05-12 17:47:10.629 +05:30 [INF] HTTP GET /api/Projects responded 200 in 3.8776 ms
+2026-05-12 17:47:13.180 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.0971 ms
+2026-05-12 17:47:13.350 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 154.6252 ms
+2026-05-12 17:52:04.699 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.4226 ms
+2026-05-12 17:52:05.083 +05:30 [INF] HTTP GET /api/Employees responded 200 in 170.9039 ms
+2026-05-12 17:52:05.458 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0681 ms
+2026-05-12 17:52:05.543 +05:30 [INF] HTTP GET /api/Projects responded 200 in 33.5672 ms
+2026-05-12 17:52:06.198 +05:30 [INF] HTTP GET /api/Projects responded 200 in 24.3453 ms
+2026-05-12 17:52:06.761 +05:30 [INF] HTTP GET /api/Projects responded 200 in 6.0801 ms
+2026-05-12 17:52:10.765 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.0554 ms
+2026-05-12 17:52:10.802 +05:30 [INF] HTTP GET /api/Employees responded 200 in 16.6278 ms
+2026-05-12 17:52:11.975 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.2256 ms
+2026-05-12 17:52:12.018 +05:30 [INF] HTTP GET /api/Projects responded 200 in 21.2172 ms
+2026-05-12 17:52:13.107 +05:30 [INF] HTTP GET /api/Projects responded 200 in 59.7136 ms
+2026-05-12 17:52:14.208 +05:30 [INF] HTTP GET /api/Projects responded 200 in 14.8864 ms
+2026-05-12 17:52:15.269 +05:30 [INF] HTTP GET /api/Projects responded 200 in 34.7978 ms
+2026-05-12 17:52:17.425 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.0763 ms
+2026-05-12 17:52:17.631 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 190.8827 ms
+2026-05-12 17:52:21.057 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 85.0395 ms
+2026-05-12 17:52:21.081 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.2748 ms
+2026-05-12 17:52:23.654 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.1291 ms
+2026-05-12 17:52:23.684 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 10.9267 ms
+2026-05-12 17:52:27.290 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.0426 ms
+2026-05-12 17:52:27.341 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 17.4543 ms
+2026-05-12 17:52:30.962 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0546 ms
+2026-05-12 17:52:30.992 +05:30 [INF] HTTP GET /api/Projects responded 200 in 14.1137 ms
+2026-05-12 17:52:32.368 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.0351 ms
+2026-05-12 17:52:32.492 +05:30 [INF] HTTP GET /api/Employees responded 200 in 37.2523 ms

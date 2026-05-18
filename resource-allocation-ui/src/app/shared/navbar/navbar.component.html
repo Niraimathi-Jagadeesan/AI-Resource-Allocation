@@ -1,0 +1,97 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+
+    <a
+      class="navbar-brand"
+      routerLink="/dashboard">
+      AI Resource Allocation
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav">
+
+      <!-- Left Menu -->
+      <ul
+        class="navbar-nav me-auto"
+        *ngIf="auth.isLoggedIn()">
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/dashboard"
+            routerLinkActive="active">
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item" *ngIf="auth.hasRole('Admin')">
+          <a
+            class="nav-link"
+            routerLink="/employees"
+            routerLinkActive="active">
+            Employees
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/projects"
+            routerLinkActive="active">
+            Projects
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/recommendations"
+            routerLinkActive="active">
+            Recommendations
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/risk"
+            routerLinkActive="active">
+            Risk Analysis
+          </a>
+        </li>
+      </ul>
+
+      <!-- Right Menu -->
+      <ul
+        class="navbar-nav ms-auto"
+        *ngIf="auth.isLoggedIn()">
+
+        <li class="nav-item">
+          <span class="navbar-text me-3">
+            {{ auth.getUsername() }}
+            ({{ auth.getRole() }})
+          </span>
+        </li>
+
+        <li class="nav-item">
+          <button
+            class="btn btn-outline-light btn-sm btn-logout"
+            (click)="logout()">
+            Logout
+          </button>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>

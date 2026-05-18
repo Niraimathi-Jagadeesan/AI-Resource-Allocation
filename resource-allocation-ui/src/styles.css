@@ -1,0 +1,16 @@
+body {
+  background-color: #f5f6fa;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.table th {
+  background-color: #f8f9fa;
+}

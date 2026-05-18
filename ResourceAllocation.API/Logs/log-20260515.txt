@@ -1,0 +1,3 @@
+2026-05-15 16:01:21.504 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 349.3811 ms
+2026-05-15 16:01:36.713 +05:30 [INF] HTTP GET /api/Projects responded 200 in 99.8432 ms
+2026-05-15 16:01:44.440 +05:30 [INF] HTTP GET /api/Projects/1 responded 200 in 32.0884 ms

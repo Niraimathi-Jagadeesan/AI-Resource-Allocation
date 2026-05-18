@@ -1,0 +1,372 @@
+2026-05-13 12:47:36.188 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 5.7513 ms
+2026-05-13 12:47:36.509 +05:30 [INF] HTTP GET /api/Employees responded 401 in 217.8353 ms
+2026-05-13 12:47:53.423 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 1.3500 ms
+2026-05-13 12:47:53.451 +05:30 [INF] HTTP GET /api/Employees responded 401 in 6.3281 ms
+2026-05-13 12:48:27.356 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.1494 ms
+2026-05-13 12:48:28.521 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 1140.8337 ms
+2026-05-13 12:48:30.116 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.1162 ms
+2026-05-13 12:48:30.224 +05:30 [INF] HTTP GET /api/Employees responded 200 in 97.3903 ms
+2026-05-13 12:52:18.719 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1409 ms
+2026-05-13 12:52:18.774 +05:30 [INF] HTTP GET /api/Projects responded 200 in 30.8501 ms
+2026-05-13 12:52:40.795 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.2118 ms
+2026-05-13 12:52:40.812 +05:30 [INF] HTTP GET /api/Projects responded 200 in 4.6062 ms
+2026-05-13 12:52:45.469 +05:30 [INF] HTTP GET /api/Projects responded 200 in 6.7660 ms
+2026-05-13 12:52:50.291 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1729 ms
+2026-05-13 12:52:50.299 +05:30 [INF] HTTP GET /api/Projects responded 200 in 3.7140 ms
+2026-05-13 12:52:54.303 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.1304 ms
+2026-05-13 12:52:54.414 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 97.9771 ms
+2026-05-13 12:53:58.850 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.2319 ms
+2026-05-13 12:53:58.866 +05:30 [INF] HTTP GET /api/Employees responded 200 in 5.7349 ms
+2026-05-13 12:54:02.715 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.4318 ms
+2026-05-13 12:54:02.732 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.0136 ms
+2026-05-13 12:54:03.960 +05:30 [INF] HTTP GET /api/Projects responded 200 in 4.5024 ms
+2026-05-13 12:54:06.752 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.0942 ms
+2026-05-13 12:54:06.817 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 60.6636 ms
+2026-05-13 12:54:50.841 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.4014 ms
+2026-05-13 12:54:50.857 +05:30 [INF] HTTP GET /api/Employees responded 200 in 3.9351 ms
+2026-05-13 13:09:52.574 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.0708 ms
+2026-05-13 13:09:53.662 +05:30 [INF] HTTP GET /api/Employees responded 200 in 1075.0883 ms
+2026-05-13 13:10:22.134 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.0747 ms
+2026-05-13 13:10:22.150 +05:30 [INF] HTTP GET /api/Employees responded 200 in 3.3411 ms
+2026-05-13 13:10:29.737 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.0626 ms
+2026-05-13 13:10:29.751 +05:30 [INF] HTTP GET /api/Employees responded 200 in 6.2418 ms
+2026-05-13 13:10:35.484 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.1046 ms
+2026-05-13 13:10:35.494 +05:30 [INF] HTTP GET /api/Employees responded 200 in 4.3802 ms
+2026-05-13 13:10:56.628 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.1498 ms
+2026-05-13 13:10:56.645 +05:30 [INF] HTTP GET /api/Employees responded 200 in 4.0034 ms
+2026-05-13 13:11:17.418 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.0517 ms
+2026-05-13 13:11:17.441 +05:30 [INF] HTTP GET /api/Employees responded 200 in 3.8854 ms
+2026-05-13 13:11:27.180 +05:30 [INF] HTTP OPTIONS /api/Employees/2 responded 204 in 0.0698 ms
+2026-05-13 13:11:27.321 +05:30 [INF] HTTP PUT /api/Employees/2 responded 204 in 130.9706 ms
+2026-05-13 13:11:27.331 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.2228 ms
+2026-05-13 13:11:27.346 +05:30 [INF] HTTP GET /api/Employees responded 200 in 6.0321 ms
+2026-05-13 13:11:31.566 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0521 ms
+2026-05-13 13:11:31.585 +05:30 [INF] HTTP GET /api/Projects responded 200 in 13.8938 ms
+2026-05-13 13:11:47.768 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0629 ms
+2026-05-13 13:11:47.787 +05:30 [INF] HTTP GET /api/Projects responded 200 in 3.3528 ms
+2026-05-13 13:11:52.087 +05:30 [INF] HTTP OPTIONS /api/Recommendation/2 responded 204 in 0.6604 ms
+2026-05-13 13:11:52.174 +05:30 [INF] HTTP GET /api/Recommendation/2 responded 200 in 65.2012 ms
+2026-05-13 13:15:06.594 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0864 ms
+2026-05-13 13:15:06.623 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.2804 ms
+2026-05-13 13:15:18.216 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0696 ms
+2026-05-13 13:15:18.233 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.4161 ms
+2026-05-13 13:15:31.228 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.0727 ms
+2026-05-13 13:15:31.297 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 62.9941 ms
+2026-05-13 13:16:37.200 +05:30 [INF] HTTP OPTIONS /api/Recommendation/2 responded 204 in 0.2651 ms
+2026-05-13 13:16:37.287 +05:30 [INF] HTTP GET /api/Recommendation/2 responded 200 in 70.6667 ms
+2026-05-13 13:27:40.057 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1714 ms
+2026-05-13 13:27:41.606 +05:30 [INF] HTTP GET /api/Projects responded 200 in 1503.4003 ms
+2026-05-13 13:27:44.248 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0778 ms
+2026-05-13 13:27:44.277 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 11.8426 ms
+2026-05-13 13:30:43.991 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1872 ms
+2026-05-13 13:30:44.050 +05:30 [INF] HTTP GET /api/Projects responded 200 in 18.2589 ms
+2026-05-13 13:30:57.344 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.3225 ms
+2026-05-13 13:30:57.372 +05:30 [INF] HTTP GET /api/Projects responded 200 in 10.4946 ms
+2026-05-13 13:31:13.405 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0404 ms
+2026-05-13 13:31:13.421 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 5.3974 ms
+2026-05-13 13:35:43.601 +05:30 [INF] HTTP GET /Services/ responded 404 in 15.8105 ms
+2026-05-13 13:38:35.978 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 1.9901 ms
+2026-05-13 13:38:36.215 +05:30 [INF] HTTP GET /api/Projects responded 200 in 190.3033 ms
+2026-05-13 13:38:50.267 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.2328 ms
+2026-05-13 13:38:58.343 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 119.5243 ms
+2026-05-13 13:39:05.791 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.1325 ms
+2026-05-13 13:39:08.834 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 27.3011 ms
+2026-05-13 13:40:18.388 +05:30 [INF] HTTP GET /api/Risk/1 responded 401 in 8.4179 ms
+2026-05-13 13:40:36.678 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 46.4252 ms
+2026-05-13 13:40:52.666 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 5.7939 ms
+2026-05-13 14:26:15.959 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.8880 ms
+2026-05-13 14:26:17.059 +05:30 [INF] HTTP GET /api/Projects responded 200 in 1085.4094 ms
+2026-05-13 14:26:25.945 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0522 ms
+2026-05-13 14:26:25.953 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 3.6981 ms
+2026-05-13 15:14:06.578 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 2.1629 ms
+2026-05-13 15:14:06.902 +05:30 [INF] HTTP GET /api/Projects responded 200 in 278.6818 ms
+2026-05-13 15:14:09.580 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.2437 ms
+2026-05-13 15:14:09.705 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 117.3014 ms
+2026-05-13 15:14:12.163 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 21.3192 ms
+2026-05-13 15:14:15.008 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.1508 ms
+2026-05-13 15:14:15.024 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 8.1383 ms
+2026-05-13 15:14:23.208 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.1269 ms
+2026-05-13 15:14:23.224 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 4.1275 ms
+2026-05-13 15:14:25.778 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 10.0234 ms
+2026-05-13 15:14:26.480 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 8.2566 ms
+2026-05-13 15:14:27.008 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 8.4215 ms
+2026-05-13 15:14:27.205 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 4.5228 ms
+2026-05-13 15:14:27.408 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 10.1643 ms
+2026-05-13 15:14:27.592 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 4.4137 ms
+2026-05-13 15:14:27.776 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 4.2180 ms
+2026-05-13 15:14:27.989 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 9.7577 ms
+2026-05-13 15:14:28.181 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 7.6325 ms
+2026-05-13 15:14:28.393 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0956 ms
+2026-05-13 15:14:28.412 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 6.9665 ms
+2026-05-13 15:22:18.033 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.4028 ms
+2026-05-13 15:22:18.169 +05:30 [INF] HTTP GET /api/Projects responded 200 in 124.4681 ms
+2026-05-13 15:22:21.304 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.2649 ms
+2026-05-13 15:22:21.324 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 9.3984 ms
+2026-05-13 15:22:24.860 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.1525 ms
+2026-05-13 15:22:24.871 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 4.6458 ms
+2026-05-13 15:22:48.029 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.0918 ms
+2026-05-13 15:22:48.050 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 5.9517 ms
+2026-05-13 15:22:51.875 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 10.9899 ms
+2026-05-13 15:22:56.897 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.1802 ms
+2026-05-13 15:22:56.915 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 6.1378 ms
+2026-05-13 15:22:57.608 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 4.9107 ms
+2026-05-13 15:22:58.120 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 8.0850 ms
+2026-05-13 15:23:04.262 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.4175 ms
+2026-05-13 15:23:04.273 +05:30 [INF] HTTP GET /api/Projects responded 200 in 3.6739 ms
+2026-05-13 15:23:07.160 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.2487 ms
+2026-05-13 15:23:07.187 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 10.5295 ms
+2026-05-13 15:25:12.831 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0505 ms
+2026-05-13 15:25:44.133 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0635 ms
+2026-05-13 15:25:26.380 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0472 ms
+2026-05-13 15:25:31.605 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1395 ms
+2026-05-13 15:25:54.085 +05:30 [INF] HTTP GET /api/Projects responded 200 in 3.7902 ms
+2026-05-13 15:26:04.903 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 3.6392 ms
+2026-05-13 15:26:05.171 +05:30 [INF] HTTP GET /api/Projects responded 200 in 211.9793 ms
+2026-05-13 15:26:07.977 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.6398 ms
+2026-05-13 15:26:08.274 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 289.8732 ms
+2026-05-13 15:26:34.769 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 1.8537 ms
+2026-05-13 15:26:34.823 +05:30 [INF] HTTP GET /api/Projects responded 200 in 31.7233 ms
+2026-05-13 15:26:37.259 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0822 ms
+2026-05-13 15:26:37.284 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 16.4816 ms
+2026-05-13 15:26:45.444 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.2039 ms
+2026-05-13 15:26:45.468 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 9.2458 ms
+2026-05-13 15:28:26.184 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.2034 ms
+2026-05-13 15:28:26.210 +05:30 [INF] HTTP GET /api/Projects responded 200 in 12.7019 ms
+2026-05-13 15:28:29.087 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.3009 ms
+2026-05-13 15:28:29.223 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 130.1559 ms
+2026-05-13 15:39:15.427 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 3.9882 ms
+2026-05-13 15:39:15.702 +05:30 [INF] HTTP GET /api/Projects responded 200 in 218.6693 ms
+2026-05-13 15:39:20.542 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.5546 ms
+2026-05-13 15:40:09.384 +05:30 [ERR] HTTP GET /api/Recommendation/1 responded 500 in 30974.2687 ms
+System.ClientModel.ClientResultException: HTTP 401 (invalid_request_error: invalid_api_key)
+
+Incorrect API key provided: AIzaSyAE***************************MgKw. You can find your API key at https://platform.openai.com/account/api-keys.
+   at OpenAI.ClientPipelineExtensions.ProcessMessageAsync(ClientPipeline pipeline, PipelineMessage message, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(BinaryContent content, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(IEnumerable`1 messages, ChatCompletionOptions options, RequestOptions requestOptions)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(ChatMessage[] messages)
+   at ResourceAllocation.API.Services.OpenAIService.GenerateRecommendationExplanationAsync(String employeeName, String projectName, String reason) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\OpenAIService.cs:line 34
+   at ResourceAllocation.API.Controllers.RecommendationController.Get(Int32 projectId) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\RecommendationController.cs:line 48
+   at lambda_method69(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-13 15:40:09.405 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ClientModel.ClientResultException: HTTP 401 (invalid_request_error: invalid_api_key)
+
+Incorrect API key provided: AIzaSyAE***************************MgKw. You can find your API key at https://platform.openai.com/account/api-keys.
+   at OpenAI.ClientPipelineExtensions.ProcessMessageAsync(ClientPipeline pipeline, PipelineMessage message, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(BinaryContent content, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(IEnumerable`1 messages, ChatCompletionOptions options, RequestOptions requestOptions)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(ChatMessage[] messages)
+   at ResourceAllocation.API.Services.OpenAIService.GenerateRecommendationExplanationAsync(String employeeName, String projectName, String reason) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\OpenAIService.cs:line 34
+   at ResourceAllocation.API.Controllers.RecommendationController.Get(Int32 projectId) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\RecommendationController.cs:line 48
+   at lambda_method69(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-13 15:42:07.779 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 2.3384 ms
+2026-05-13 15:42:08.111 +05:30 [INF] HTTP GET /api/Projects responded 200 in 243.2277 ms
+2026-05-13 15:42:10.336 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.7811 ms
+2026-05-13 15:42:18.403 +05:30 [ERR] HTTP GET /api/Recommendation/1 responded 500 in 8052.2616 ms
+System.ClientModel.ClientResultException: HTTP 404 (invalid_request_error: model_not_found)
+
+The model `gemini-2.5-flash` does not exist or you do not have access to it.
+   at OpenAI.ClientPipelineExtensions.ProcessMessageAsync(ClientPipeline pipeline, PipelineMessage message, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(BinaryContent content, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(IEnumerable`1 messages, ChatCompletionOptions options, RequestOptions requestOptions)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(ChatMessage[] messages)
+   at ResourceAllocation.API.Services.OpenAIService.GenerateRecommendationExplanationAsync(String employeeName, String projectName, String reason) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\OpenAIService.cs:line 34
+   at ResourceAllocation.API.Controllers.RecommendationController.Get(Int32 projectId) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\RecommendationController.cs:line 48
+   at lambda_method69(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-13 15:42:18.469 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ClientModel.ClientResultException: HTTP 404 (invalid_request_error: model_not_found)
+
+The model `gemini-2.5-flash` does not exist or you do not have access to it.
+   at OpenAI.ClientPipelineExtensions.ProcessMessageAsync(ClientPipeline pipeline, PipelineMessage message, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(BinaryContent content, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(IEnumerable`1 messages, ChatCompletionOptions options, RequestOptions requestOptions)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(ChatMessage[] messages)
+   at ResourceAllocation.API.Services.OpenAIService.GenerateRecommendationExplanationAsync(String employeeName, String projectName, String reason) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\OpenAIService.cs:line 34
+   at ResourceAllocation.API.Controllers.RecommendationController.Get(Int32 projectId) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\RecommendationController.cs:line 48
+   at lambda_method69(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-13 15:43:04.847 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 3.1859 ms
+2026-05-13 15:43:05.186 +05:30 [INF] HTTP GET /api/Projects responded 200 in 272.4199 ms
+2026-05-13 15:43:07.305 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 1.2486 ms
+2026-05-13 15:43:13.274 +05:30 [ERR] HTTP GET /api/Recommendation/1 responded 500 in 5948.0970 ms
+System.ClientModel.ClientResultException: HTTP 429 (insufficient_quota: insufficient_quota)
+
+You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+   at OpenAI.ClientPipelineExtensions.ProcessMessageAsync(ClientPipeline pipeline, PipelineMessage message, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(BinaryContent content, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(IEnumerable`1 messages, ChatCompletionOptions options, RequestOptions requestOptions)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(ChatMessage[] messages)
+   at ResourceAllocation.API.Services.OpenAIService.GenerateRecommendationExplanationAsync(String employeeName, String projectName, String reason) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\OpenAIService.cs:line 34
+   at ResourceAllocation.API.Controllers.RecommendationController.Get(Int32 projectId) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\RecommendationController.cs:line 48
+   at lambda_method69(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-13 15:43:13.342 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.ClientModel.ClientResultException: HTTP 429 (insufficient_quota: insufficient_quota)
+
+You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+   at OpenAI.ClientPipelineExtensions.ProcessMessageAsync(ClientPipeline pipeline, PipelineMessage message, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(BinaryContent content, RequestOptions options)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(IEnumerable`1 messages, ChatCompletionOptions options, RequestOptions requestOptions)
+   at OpenAI.Chat.ChatClient.CompleteChatAsync(ChatMessage[] messages)
+   at ResourceAllocation.API.Services.OpenAIService.GenerateRecommendationExplanationAsync(String employeeName, String projectName, String reason) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Services\OpenAIService.cs:line 34
+   at ResourceAllocation.API.Controllers.RecommendationController.Get(Int32 projectId) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\RecommendationController.cs:line 48
+   at lambda_method69(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-05-13 15:57:44.446 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 2.5500 ms
+2026-05-13 15:57:44.743 +05:30 [INF] HTTP GET /api/Projects responded 200 in 231.2202 ms
+2026-05-13 15:57:47.948 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 1.1132 ms
+2026-05-13 15:59:10.990 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 3.8281 ms
+2026-05-13 15:59:11.276 +05:30 [INF] HTTP GET /api/Projects responded 200 in 226.7995 ms
+2026-05-13 15:59:13.914 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.4708 ms
+2026-05-13 15:59:15.467 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 1539.4786 ms
+2026-05-13 16:04:28.410 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 5.7857 ms
+2026-05-13 16:04:28.924 +05:30 [INF] HTTP GET /api/Projects responded 200 in 417.6580 ms
+2026-05-13 16:04:33.035 +05:30 [INF] HTTP OPTIONS /api/Recommendation/1 responded 204 in 0.6457 ms
+2026-05-13 16:04:36.010 +05:30 [INF] HTTP GET /api/Recommendation/1 responded 200 in 2963.9714 ms
+2026-05-13 16:05:09.204 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.6236 ms
+2026-05-13 16:05:09.251 +05:30 [INF] HTTP GET /api/Projects responded 200 in 10.9882 ms
+2026-05-13 16:05:11.527 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0902 ms
+2026-05-13 16:05:11.573 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 39.5211 ms
+2026-05-13 16:08:53.608 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 2.0166 ms
+2026-05-13 16:08:53.876 +05:30 [INF] HTTP GET /api/Projects responded 200 in 221.5686 ms
+2026-05-13 16:08:57.949 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 1.0295 ms
+2026-05-13 16:08:58.941 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 983.8509 ms
+2026-05-13 17:01:11.159 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.1124 ms
+2026-05-13 17:01:13.031 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 1847.4262 ms
+2026-05-13 17:01:36.616 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.3795 ms
+2026-05-13 17:01:36.664 +05:30 [INF] HTTP GET /api/Employees responded 200 in 40.8649 ms
+2026-05-13 17:03:05.815 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.8633 ms
+2026-05-13 17:03:05.958 +05:30 [INF] HTTP POST /api/Employees responded 201 in 124.8947 ms
+2026-05-13 17:03:05.969 +05:30 [INF] HTTP GET /api/Employees responded 200 in 3.6601 ms
+2026-05-13 17:03:09.601 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1725 ms
+2026-05-13 17:03:09.616 +05:30 [INF] HTTP GET /api/Projects responded 200 in 6.0788 ms
+2026-05-13 17:03:45.142 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 1.3117 ms
+2026-05-13 17:03:45.206 +05:30 [INF] HTTP POST /api/Projects responded 400 in 41.2217 ms
+2026-05-13 17:03:48.797 +05:30 [INF] HTTP POST /api/Projects responded 400 in 2.0487 ms
+2026-05-13 17:06:47.076 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 6.0464 ms
+2026-05-13 17:06:47.633 +05:30 [INF] HTTP GET /api/Projects responded 200 in 456.9749 ms
+2026-05-13 17:07:07.211 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.8199 ms
+2026-05-13 17:07:07.699 +05:30 [INF] HTTP POST /api/Projects responded 201 in 469.7500 ms
+2026-05-13 17:07:07.725 +05:30 [INF] HTTP GET /api/Projects responded 200 in 14.5629 ms
+2026-05-13 17:07:14.677 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1429 ms
+2026-05-13 17:07:14.691 +05:30 [INF] HTTP GET /api/Projects responded 200 in 6.7082 ms
+2026-05-13 17:07:18.467 +05:30 [INF] HTTP OPTIONS /api/Recommendation/3 responded 204 in 0.2038 ms
+2026-05-13 17:07:20.248 +05:30 [INF] HTTP GET /api/Recommendation/3 responded 200 in 1767.6124 ms
+2026-05-13 17:08:03.837 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1330 ms
+2026-05-13 17:08:03.865 +05:30 [INF] HTTP GET /api/Projects responded 200 in 8.4579 ms
+2026-05-13 17:08:06.466 +05:30 [INF] HTTP OPTIONS /api/Risk/3 responded 204 in 0.0801 ms
+2026-05-13 17:08:06.972 +05:30 [INF] HTTP GET /api/Risk/3 responded 200 in 500.3801 ms
+2026-05-13 17:08:33.666 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 1.7084 ms
+2026-05-13 17:08:33.681 +05:30 [INF] HTTP GET /api/Projects responded 200 in 4.5543 ms
+2026-05-13 17:08:36.074 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.4451 ms
+2026-05-13 17:08:38.141 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.4181 ms
+2026-05-13 17:08:51.001 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.3133 ms
+2026-05-13 17:08:51.098 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 86.1787 ms
+2026-05-13 17:08:58.772 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.1944 ms
+2026-05-13 17:08:58.800 +05:30 [INF] HTTP GET /api/Employees responded 200 in 20.2182 ms
+2026-05-13 17:09:02.836 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0660 ms
+2026-05-13 17:09:02.847 +05:30 [INF] HTTP GET /api/Projects responded 200 in 4.2802 ms
+2026-05-13 17:09:07.969 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1486 ms
+2026-05-13 17:09:07.987 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.7111 ms
+2026-05-13 17:09:10.723 +05:30 [INF] HTTP OPTIONS /api/Recommendation/3 responded 204 in 0.1966 ms
+2026-05-13 17:09:11.883 +05:30 [INF] HTTP GET /api/Recommendation/3 responded 200 in 1151.4452 ms
+2026-05-13 17:09:13.356 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0713 ms
+2026-05-13 17:09:13.368 +05:30 [INF] HTTP GET /api/Projects responded 200 in 4.5671 ms
+2026-05-13 17:09:15.351 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.1710 ms
+2026-05-13 17:09:17.165 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 1802.4909 ms
+2026-05-13 17:09:19.352 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.1688 ms
+2026-05-13 17:09:19.379 +05:30 [INF] HTTP GET /api/Projects responded 200 in 9.0415 ms
+2026-05-13 17:09:21.312 +05:30 [INF] HTTP OPTIONS /api/Employees responded 204 in 0.1534 ms
+2026-05-13 17:09:21.330 +05:30 [INF] HTTP GET /api/Employees responded 200 in 7.9311 ms
+2026-05-13 17:09:24.546 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.3368 ms
+2026-05-13 17:09:24.565 +05:30 [INF] HTTP GET /api/Projects responded 200 in 7.1844 ms
+2026-05-13 17:13:57.517 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 1.1003 ms
+2026-05-13 17:13:57.837 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 293.2200 ms
+2026-05-13 17:14:05.473 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 0.0620 ms
+2026-05-13 17:14:05.487 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 7.1969 ms
+2026-05-13 17:14:11.094 +05:30 [INF] HTTP OPTIONS /api/Projects responded 204 in 0.0477 ms
+2026-05-13 17:14:11.104 +05:30 [INF] HTTP GET /api/Projects responded 200 in 4.2758 ms
+2026-05-13 17:14:13.172 +05:30 [INF] HTTP OPTIONS /api/Risk/3 responded 204 in 0.0399 ms
+2026-05-13 17:14:13.712 +05:30 [INF] HTTP GET /api/Risk/3 responded 200 in 528.8333 ms
+2026-05-13 17:14:19.178 +05:30 [INF] HTTP OPTIONS /api/Risk/2 responded 204 in 0.0401 ms
+2026-05-13 17:14:19.588 +05:30 [INF] HTTP GET /api/Risk/2 responded 200 in 401.6584 ms
+2026-05-13 17:14:22.071 +05:30 [INF] HTTP OPTIONS /api/Risk/1 responded 204 in 0.0483 ms
+2026-05-13 17:14:22.701 +05:30 [INF] HTTP GET /api/Risk/1 responded 200 in 620.8903 ms
