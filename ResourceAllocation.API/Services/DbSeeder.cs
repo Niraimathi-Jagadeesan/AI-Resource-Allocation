@@ -128,7 +128,7 @@ namespace ResourceAllocation.API.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Seed error: {ex.Message}");
+                Console.WriteLine($"Database seeding skipped: {ex.Message}");
             }
         }
     }

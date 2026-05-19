@@ -130,16 +130,18 @@ builder.Services.AddScoped<DbSeeder>();
 //
 // 7. CORS for Angular
 //
+var allowedOrigins = builder.Configuration
+    .GetSection("AllowedOrigins")
+    .Get<string[]>() ?? Array.Empty<string>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins(
-            "http://localhost:4200",
-            "https://purple-cliff-0ed652900.7.azurestaticapps.net/"
-        )
-        .AllowAnyHeader()
-        .AllowAnyMethod();
+        policy.WithOrigins(allowedOrigins)
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
 
@@ -174,7 +176,7 @@ app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 
-app.UseCors("AllowAngularApp");
+app.UseCors("AllowFrontend");
 
 app.UseAuthentication();
 app.UseAuthorization();
