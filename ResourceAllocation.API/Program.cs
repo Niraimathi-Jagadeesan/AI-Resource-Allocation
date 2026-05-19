@@ -129,7 +129,7 @@ builder.Services.AddCors(options =>
     {
         policy.WithOrigins(
             "http://localhost:4200",
-            "https://<your-static-web-app-url>"
+            "https://purple-cliff-0ed652900.7.azurestaticapps.net/"
         )
         .AllowAnyHeader()
         .AllowAnyMethod();
