@@ -17,11 +17,16 @@ test('should navigate to recommendations page', async ({ page }) => {
 });
 
 test('should load project dropdown', async ({ page }) => {
-  await page.goto('/recommendations');
+  await page.goto('/recommendations');  
 
   const dropdown = page.locator('select');
   await expect(dropdown).toBeVisible();
 
+  // Wait until dropdown has more than 1 option
+  await expect.poll(async () => {
+    return await dropdown.locator('option').count();
+  }).toBeGreaterThan(1);
+  
   const optionCount = await dropdown.locator('option').count();
   expect(optionCount).toBeGreaterThan(1);
 });

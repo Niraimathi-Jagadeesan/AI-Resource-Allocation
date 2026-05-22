@@ -52,10 +52,13 @@ test.describe('Employee CRUD Tests', () => {
     await expect(page.getByText('Senior Developer')).toBeVisible();
   });
 
-  test('admin can delete employee', async ({ page }) => {
+  test('admin can delete employee', async ({ page }) => {    
     // Navigate to Employees page
     await page.goto('/employees');
-
+    
+    // Wait for table rows to load
+    await page.waitForSelector('tbody tr');
+    
     // Get employee count before delete
     const rowsBefore = await page.locator('tbody tr').count();
 
