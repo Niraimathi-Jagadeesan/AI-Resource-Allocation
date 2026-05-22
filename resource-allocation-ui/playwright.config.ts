@@ -22,11 +22,18 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'https://purple-cliff-0ed652900.7.azurestaticapps.net',
+    baseURL: 'http://localhost:4200',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'retain-on-failure'
+  },
+
+  webServer: {
+    command: 'npm start',
+    url: 'http://127.0.0.1:4200',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120000
   },
 
   projects: [
