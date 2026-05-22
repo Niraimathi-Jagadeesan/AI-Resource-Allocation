@@ -1,94 +1,89 @@
 name: CI Pipeline
 
 on:
-push:
-branches:
-- dev
-- qa
-- release
-- main
+  push:
+    branches:
+      - dev
+      - qa
+      - release
+      - main
 
 jobs:
 
-build-ui:
-runs-on: ubuntu-latest
+  build-ui:
+    runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: resource-allocation-ui
 
-defaults:
-  run:
-    working-directory: resource-allocation-ui
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-steps:
-  - name: Checkout Code
-    uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-  - name: Setup Node
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20
+      - name: Install Dependencies
+        run: npm install
 
-  - name: Install Dependencies
-    run: npm install
+      - name: Build Angular App
+        run: npm run build -- --configuration production
 
-  - name: Build Angular App
-    run: npm run build -- --configuration production
+  build-api:
+    runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ResourceAllocation.API
 
-build-api:
-runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
 
-defaults:
-  run:
-    working-directory: ResourceAllocation.API
+      - name: Restore Packages
+        run: dotnet restore
 
-steps:
-  - name: Checkout Code
-    uses: actions/checkout@v4
+      - name: Build API
+        run: dotnet build --configuration Release
 
-  - name: Setup .NET
-    uses: actions/setup-dotnet@v4
-    with:
-      dotnet-version: 8.0.x
+  playwright-tests:
+    runs-on: ubuntu-latest
+    needs:
+      - build-ui
 
-  - name: Restore Packages
-    run: dotnet restore
+    defaults:
+      run:
+        working-directory: resource-allocation-ui
 
-  - name: Build API
-    run: dotnet build --configuration Release
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-playwright-tests:
-runs-on: ubuntu-latest
-needs:
-- build-ui
+      - name: Install Dependencies
+        run: npm install
 
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
 
-defaults:
-  run:
-    working-directory: resource-allocation-ui
+      - name: Run Playwright Tests
+        run: npx playwright test
 
-steps:
-  - name: Checkout Code
-    uses: actions/checkout@v4
-
-  - name: Setup Node
-    uses: actions/setup-node@v4
-    with:
-      node-version: 20
-
-  - name: Install Dependencies
-    run: npm install
-
-  - name: Install Playwright Browsers
-    run: npx playwright install --with-deps
-
-  - name: Run Playwright Tests
-    run: npx playwright test
-
-  - name: Upload Playwright Report
-    uses: actions/upload-artifact@v4
-    if: always()
-    with:
-      name: playwright-report
-      path: UI/playwright-report/
+      - name: Upload Playwright Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report
+          path: UI/playwright-report/
