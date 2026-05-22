@@ -22,8 +22,8 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'http://localhost:4200',
-    headless: false,
+    baseURL: 'https://purple-cliff-0ed652900.7.azurestaticapps.net',
+    headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'retain-on-failure'
