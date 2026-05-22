@@ -13,7 +13,7 @@ jobs:
 build-ui:
 runs-on: ubuntu-latest
 
-```
+
 defaults:
   run:
     working-directory: resource-allocation-ui
@@ -32,12 +32,12 @@ steps:
 
   - name: Build Angular App
     run: npm run build -- --configuration production
-```
+
 
 build-api:
 runs-on: ubuntu-latest
 
-```
+
 defaults:
   run:
     working-directory: ResourceAllocation.API
@@ -56,14 +56,14 @@ steps:
 
   - name: Build API
     run: dotnet build --configuration Release
-```
+
 
 playwright-tests:
 runs-on: ubuntu-latest
 needs:
 - build-ui
 
-```
+
 defaults:
   run:
     working-directory: resource-allocation-ui
@@ -92,4 +92,3 @@ steps:
     with:
       name: playwright-report
       path: UI/playwright-report/
-```
