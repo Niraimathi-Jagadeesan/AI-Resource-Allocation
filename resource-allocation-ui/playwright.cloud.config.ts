@@ -23,7 +23,7 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL,
+    baseURL: process.env['PLAYWRIGHT_BASE_URL'],
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',

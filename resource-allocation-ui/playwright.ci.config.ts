@@ -22,7 +22,7 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'http://localhost:4200',
+    baseURL: 'http://localhost:7193',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -31,8 +31,8 @@ export default defineConfig({
 
   webServer: {
     command: 'npm start',
-    url: 'http://127.0.0.1:4200',
-    reuseExistingServer: !process.env.CI,
+    url: 'http://127.0.0.1:7193',
+    reuseExistingServer: !process.env['CI'],
     timeout: 120000
   },
 
