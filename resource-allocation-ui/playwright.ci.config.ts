@@ -1,12 +1,13 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
+
   testDir: './tests',
 
-  timeout: 60_000,
+  timeout: 60000,
 
   expect: {
-    timeout: 10_000
+    timeout: 10000
   },
 
   fullyParallel: false,
@@ -22,7 +23,7 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'http://localhost:7193',
+    baseURL: 'http://127.0.0.1:4200',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -31,9 +32,11 @@ export default defineConfig({
 
   webServer: {
     command: 'npm start',
-    url: 'http://127.0.0.1:7193',
-    reuseExistingServer: !process.env['CI'],
-    timeout: 120000
+    url: 'http://127.0.0.1:4200',
+    reuseExistingServer: false,
+    timeout: 300000,
+    stdout: 'pipe',
+    stderr: 'pipe'
   },
 
   projects: [
