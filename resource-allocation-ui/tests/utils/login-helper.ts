@@ -6,5 +6,6 @@ export async function login(page: Page, username: string, password: string): Pro
     await page.fill('id=username', username);
     await page.fill('id=password', password);
     await page.click('id=loginButton');
+    await page.waitForTimeout(3000);
     await expect(page).toHaveURL('/dashboard');
 }

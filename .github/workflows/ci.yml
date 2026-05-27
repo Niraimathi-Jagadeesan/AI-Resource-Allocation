@@ -1,23 +1,21 @@
-name: CI Pipeline
+name: CI
 
 on:
   push:
-    branches:
-      - dev
-      - qa
-      - release
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
 
+  # -----------------------------
+  # Build UI
+  # -----------------------------
   build-ui:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: resource-allocation-ui
-
     steps:
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -26,20 +24,22 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Dependencies
+      - name: Install UI Dependencies
+        working-directory: resource-allocation-ui
         run: npm install
 
-      - name: Build Angular App
-        run: npm run build -- --configuration production
+      - name: Build UI
+        working-directory: resource-allocation-ui
+        run: npm run build
 
+  # -----------------------------
+  # Build API
+  # -----------------------------
   build-api:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ResourceAllocation.API
-
     steps:
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -48,42 +48,108 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
-      - name: Restore Packages
+      - name: Restore API Packages
+        working-directory: ResourceAllocation.API
         run: dotnet restore
 
       - name: Build API
-        run: dotnet build --configuration Release
+        working-directory: ResourceAllocation.API
+        run: dotnet build --no-restore
 
+  # -----------------------------
+  # Playwright Tests
+  # -----------------------------
   playwright-tests:
     runs-on: ubuntu-latest
+
     needs:
       - build-ui
-
-    defaults:
-      run:
-        working-directory: resource-allocation-ui
+      - build-api
 
     steps:
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # -----------------------------
+      # Setup Node
+      # -----------------------------
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install Dependencies
+      # -----------------------------
+      # Setup .NET
+      # -----------------------------
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      # -----------------------------
+      # Install UI Dependencies
+      # -----------------------------
+      - name: Install UI Dependencies
+        working-directory: resource-allocation-ui
         run: npm install
 
+      # -----------------------------
+      # Install Playwright Browsers
+      # -----------------------------
       - name: Install Playwright Browsers
+        working-directory: resource-allocation-ui
         run: npx playwright install --with-deps
 
-      - name: Run Playwright Tests
-        run: npx playwright test
+      # -----------------------------
+      # Restore API Packages
+      # -----------------------------
+      - name: Restore API Packages
+        working-directory: ResourceAllocation.API
+        run: dotnet restore
 
+      # -----------------------------
+      # Start Backend API
+      # -----------------------------
+      - name: Start Backend API
+        working-directory: ResourceAllocation.API
+        run: dotnet run --urls=http://localhost:5000 &
+
+      # -----------------------------
+      # Wait for API
+      # -----------------------------
+      - name: Wait for API
+        run: sleep 20
+
+      # -----------------------------
+      # Verify API Running
+      # -----------------------------
+      - name: Verify API
+        run: curl http://localhost:5000/swagger/index.html
+
+      # -----------------------------
+      # Run Playwright Tests
+      # -----------------------------
+      - name: Run Playwright Tests
+        working-directory: resource-allocation-ui
+        run: npx playwright test --config=playwright.ci.config.ts
+
+      # -----------------------------
+      # Upload Playwright Report
+      # -----------------------------
       - name: Upload Playwright Report
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: playwright-report
           path: resource-allocation-ui/playwright-report/
+
+      # -----------------------------
+      # Upload Screenshots/Videos
+      # -----------------------------
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-test-results
+          path: resource-allocation-ui/test-results/
