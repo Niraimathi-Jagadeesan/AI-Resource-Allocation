@@ -6,6 +6,11 @@ export async function login(page: Page, username: string, password: string): Pro
     await page.fill('id=username', username);
     await page.fill('id=password', password);
     await page.click('id=loginButton');
-    await page.waitForTimeout(3000);
+    // Debugging
+    console.log(await page.url());
+    // Print page content if login fails
+    if (page.url().includes('/login')) {
+        console.log(await page.locator('body').textContent());
+    }
     await expect(page).toHaveURL('/dashboard');
 }

@@ -121,19 +121,24 @@ jobs:
       # -----------------------------
       - name: Start Backend API
         working-directory: ResourceAllocation.API
-        run: dotnet run --urls=http://localhost:5000 &
+        run: dotnet run --urls=https://localhost:5000 &
 
       # -----------------------------
       # Wait for API
       # -----------------------------
       - name: Wait for API
-        run: sleep 20
+        run: |
+          for i in {1..30}; do
+            curl -s https://localhost:5000/swagger/index.html && break
+            echo "Waiting for API..."
+            sleep 5
+          done
 
       # -----------------------------
       # Verify API Running
       # -----------------------------
       - name: Verify API
-        run: curl http://localhost:5000/swagger/index.html
+        run: curl https://localhost:5000/swagger/index.html
 
       # -----------------------------
       # Run Playwright Tests

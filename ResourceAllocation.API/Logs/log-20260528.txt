@@ -1,0 +1,825 @@
+2026-05-27 15:04:40.908 +05:30 [INF] HTTP GET /api/Projects responded 401 in 189.3832 ms
+2026-05-28 11:54:06.136 +05:30 [ERR] An error occurred using the connection to database 'ResourceAllocationDB' on server 'tcp:ai-resource-allocation.database.windows.net,1433'.
+2026-05-28 11:54:06.250 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'ResourceAllocation.API.Data.AppDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> Azure.Identity.CredentialUnavailableException: DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> System.AggregateException: Multiple exceptions were encountered while attempting to authenticate. (EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot) (ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.) (Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.) (Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot) (Azure CLI not installed) (Az.Account module >= 2.2.0 is not installed.)
+ ---> Azure.Identity.CredentialUnavailableException: EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.EnvironmentCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.EnvironmentCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) Azure.Identity.CredentialUnavailableException: ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+ ---> System.AggregateException: Retry failed after 4 tries. Retry settings can be adjusted in ClientOptions.Retry. (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.)
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Identity.ManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+ ---> (Inner Exception #1) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #2) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #3) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityClient.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #2) Azure.Identity.CredentialUnavailableException: Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+ ---> System.InvalidOperationException: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #3) Azure.Identity.CredentialUnavailableException: Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+ ---> System.InvalidOperationException: CredRead has failed but error is unknown.
+   at Azure.Identity.WindowsNativeMethods.ThrowIfFailed(Boolean isSucceeded, String methodName)
+   at Azure.Identity.WindowsNativeMethods.CredRead(String target, CRED_TYPE type)
+   at Azure.Identity.WindowsVisualStudioCodeAdapter.GetCredentials(String serviceName, String accountName)
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #4) Azure.Identity.CredentialUnavailableException: Azure CLI not installed
+   at Azure.Identity.AzureCliCredential.RequestCliAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #5) Azure.Identity.CredentialUnavailableException: Az.Account module >= 2.2.0 is not installed.
+   at Azure.Identity.AzurePowerShellCredential.CheckForErrors(String output)
+   at Azure.Identity.AzurePowerShellCredential.RequestAzurePowerShellAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Microsoft.Data.SqlClient.ActiveDirectoryAuthenticationProvider.AcquireTokenAsync(SqlAuthenticationParameters parameters)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.<>c__DisplayClass147_1.<<GetFedAuthToken>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OnFedAuthInfo(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b82c927a-75fa-4ad3-951f-3a3ec22eb00d
+Microsoft.Data.SqlClient.SqlException (0x80131904): DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> Azure.Identity.CredentialUnavailableException: DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> System.AggregateException: Multiple exceptions were encountered while attempting to authenticate. (EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot) (ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.) (Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.) (Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot) (Azure CLI not installed) (Az.Account module >= 2.2.0 is not installed.)
+ ---> Azure.Identity.CredentialUnavailableException: EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.EnvironmentCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.EnvironmentCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) Azure.Identity.CredentialUnavailableException: ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+ ---> System.AggregateException: Retry failed after 4 tries. Retry settings can be adjusted in ClientOptions.Retry. (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.)
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Identity.ManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+ ---> (Inner Exception #1) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #2) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #3) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityClient.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #2) Azure.Identity.CredentialUnavailableException: Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+ ---> System.InvalidOperationException: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #3) Azure.Identity.CredentialUnavailableException: Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+ ---> System.InvalidOperationException: CredRead has failed but error is unknown.
+   at Azure.Identity.WindowsNativeMethods.ThrowIfFailed(Boolean isSucceeded, String methodName)
+   at Azure.Identity.WindowsNativeMethods.CredRead(String target, CRED_TYPE type)
+   at Azure.Identity.WindowsVisualStudioCodeAdapter.GetCredentials(String serviceName, String accountName)
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #4) Azure.Identity.CredentialUnavailableException: Azure CLI not installed
+   at Azure.Identity.AzureCliCredential.RequestCliAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #5) Azure.Identity.CredentialUnavailableException: Az.Account module >= 2.2.0 is not installed.
+   at Azure.Identity.AzurePowerShellCredential.CheckForErrors(String output)
+   at Azure.Identity.AzurePowerShellCredential.RequestAzurePowerShellAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Microsoft.Data.SqlClient.ActiveDirectoryAuthenticationProvider.AcquireTokenAsync(SqlAuthenticationParameters parameters)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.<>c__DisplayClass147_1.<<GetFedAuthToken>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OnFedAuthInfo(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b82c927a-75fa-4ad3-951f-3a3ec22eb00d
+2026-05-28 11:54:07.203 +05:30 [ERR] HTTP POST /api/Auth/login responded 500 in 15328.1494 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> Azure.Identity.CredentialUnavailableException: DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> System.AggregateException: Multiple exceptions were encountered while attempting to authenticate. (EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot) (ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.) (Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.) (Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot) (Azure CLI not installed) (Az.Account module >= 2.2.0 is not installed.)
+ ---> Azure.Identity.CredentialUnavailableException: EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.EnvironmentCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.EnvironmentCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) Azure.Identity.CredentialUnavailableException: ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+ ---> System.AggregateException: Retry failed after 4 tries. Retry settings can be adjusted in ClientOptions.Retry. (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.)
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Identity.ManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+ ---> (Inner Exception #1) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #2) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #3) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityClient.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #2) Azure.Identity.CredentialUnavailableException: Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+ ---> System.InvalidOperationException: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #3) Azure.Identity.CredentialUnavailableException: Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+ ---> System.InvalidOperationException: CredRead has failed but error is unknown.
+   at Azure.Identity.WindowsNativeMethods.ThrowIfFailed(Boolean isSucceeded, String methodName)
+   at Azure.Identity.WindowsNativeMethods.CredRead(String target, CRED_TYPE type)
+   at Azure.Identity.WindowsVisualStudioCodeAdapter.GetCredentials(String serviceName, String accountName)
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #4) Azure.Identity.CredentialUnavailableException: Azure CLI not installed
+   at Azure.Identity.AzureCliCredential.RequestCliAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #5) Azure.Identity.CredentialUnavailableException: Az.Account module >= 2.2.0 is not installed.
+   at Azure.Identity.AzurePowerShellCredential.CheckForErrors(String output)
+   at Azure.Identity.AzurePowerShellCredential.RequestAzurePowerShellAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Microsoft.Data.SqlClient.ActiveDirectoryAuthenticationProvider.AcquireTokenAsync(SqlAuthenticationParameters parameters)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.<>c__DisplayClass147_1.<<GetFedAuthToken>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OnFedAuthInfo(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at ResourceAllocation.API.Controllers.AuthController.Login(LoginRequest request) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\AuthController.cs:line 28
+   at lambda_method9(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:b82c927a-75fa-4ad3-951f-3a3ec22eb00d
+2026-05-28 11:54:07.407 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> Azure.Identity.CredentialUnavailableException: DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+- EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+- ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+- Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+- Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+- Azure CLI not installed
+- Az.Account module >= 2.2.0 is not installed.
+ ---> System.AggregateException: Multiple exceptions were encountered while attempting to authenticate. (EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot) (ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.) (Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.) (Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot) (Azure CLI not installed) (Az.Account module >= 2.2.0 is not installed.)
+ ---> Azure.Identity.CredentialUnavailableException: EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.EnvironmentCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.EnvironmentCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) Azure.Identity.CredentialUnavailableException: ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+ ---> System.AggregateException: Retry failed after 4 tries. Retry settings can be adjusted in ClientOptions.Retry. (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.) (The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.)
+ ---> System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Identity.ManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+ ---> (Inner Exception #1) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #2) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+ ---> (Inner Exception #3) System.Threading.Tasks.TaskCanceledException: The operation was cancelled because it exceeded the configured timeout of 0:00:01. Network timeout can be adjusted in ClientOptions.Retry.NetworkTimeout.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Azure.Core.Pipeline.HttpClientTransport.ProcessAsync(HttpMessage message, Boolean async)
+   at Azure.Core.Pipeline.HttpPipelineTransportPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   --- End of inner exception stack trace ---
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ThrowIfCancellationRequestedOrTimeout(CancellationToken originalToken, CancellationToken timeoutToken, Exception inner, TimeSpan timeout)
+   at Azure.Core.Pipeline.ResponseBodyPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RedirectPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)
+   at Azure.Core.Pipeline.RetryPolicy.ProcessAsync(HttpMessage message, ReadOnlyMemory`1 pipeline, Boolean async)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.ImdsManagedIdentitySource.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityClient.AuthenticateAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.ManagedIdentityCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #2) Azure.Identity.CredentialUnavailableException: Process "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'.
+ ---> System.InvalidOperationException: TS003: Error, TS004: Unable to get access token.  'AADSTS50173: The provided grant has expired due to it being revoked, a fresh auth token is needed. The user might have changed or reset their password. The grant was issued on '2026-05-18T12:12:43.6686927Z' and the TokensValidFrom date (before which tokens are not valid) for this user is '2026-05-27T05:32:07.0000000Z'. Trace ID: 31780bb6-3cdd-487d-866e-c82597e14800 Correlation ID: d5c2dc0c-8c77-4aa5-b09f-c31a693a739e Timestamp: 2026-05-28 06:23:09Z'
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCredential.RunProcessesAsync(List`1 processStartInfos, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #3) Azure.Identity.CredentialUnavailableException: Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+ ---> System.InvalidOperationException: CredRead has failed but error is unknown.
+   at Azure.Identity.WindowsNativeMethods.ThrowIfFailed(Boolean isSucceeded, String methodName)
+   at Azure.Identity.WindowsNativeMethods.CredRead(String target, CRED_TYPE type)
+   at Azure.Identity.WindowsVisualStudioCodeAdapter.GetCredentials(String serviceName, String accountName)
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   --- End of inner exception stack trace ---
+   at Azure.Identity.VisualStudioCodeCredential.GetStoredCredentials(String environmentName)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenImplAsync(TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.VisualStudioCodeCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #4) Azure.Identity.CredentialUnavailableException: Azure CLI not installed
+   at Azure.Identity.AzureCliCredential.RequestCliAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzureCliCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzureCliCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+ ---> (Inner Exception #5) Azure.Identity.CredentialUnavailableException: Az.Account module >= 2.2.0 is not installed.
+   at Azure.Identity.AzurePowerShellCredential.CheckForErrors(String output)
+   at Azure.Identity.AzurePowerShellCredential.RequestAzurePowerShellAccessTokenAsync(Boolean async, TokenRequestContext context, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.AzurePowerShellCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)<---
+
+   --- End of inner exception stack trace ---
+   at Azure.Identity.DefaultAzureCredential.GetTokenFromSourcesAsync(TokenCredential[] sources, TokenRequestContext requestContext, Boolean async, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.CredentialDiagnosticScope.FailWrapAndThrow(Exception ex, String additionalMessage)
+   at Azure.Identity.DefaultAzureCredential.GetTokenImplAsync(Boolean async, TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Azure.Identity.DefaultAzureCredential.GetTokenAsync(TokenRequestContext requestContext, CancellationToken cancellationToken)
+   at Microsoft.Data.SqlClient.ActiveDirectoryAuthenticationProvider.AcquireTokenAsync(SqlAuthenticationParameters parameters)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.<>c__DisplayClass147_1.<<GetFedAuthToken>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.GetFedAuthToken(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OnFedAuthInfo(SqlFedAuthInfo fedAuthInfo)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at ResourceAllocation.API.Controllers.AuthController.Login(LoginRequest request) in D:\Niraimathi\Playwright\ResourceAllocationPOC\ResourceAllocation.API\Controllers\AuthController.cs:line 28
+   at lambda_method9(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:b82c927a-75fa-4ad3-951f-3a3ec22eb00d
+2026-05-28 13:36:53.424 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 365.6162 ms
+2026-05-28 13:38:46.564 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 224.1094 ms
+2026-05-28 13:39:30.270 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 46.0671 ms
+2026-05-28 13:40:18.993 +05:30 [INF] HTTP OPTIONS /api/Auth/login responded 204 in 1.5077 ms
+2026-05-28 13:40:19.040 +05:30 [INF] HTTP POST /api/Auth/login responded 200 in 39.1746 ms
