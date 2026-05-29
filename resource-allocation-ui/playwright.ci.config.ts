@@ -2,7 +2,17 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
 
+  // ONLY PLAYWRIGHT TESTS
   testDir: './tests',
+
+  // ONLY THESE FILES
+  testMatch: '**/*.spec.ts',
+
+  // EXCLUDE ANGULAR UNIT TESTS
+  testIgnore: [
+    '**/src/**/*.spec.ts',
+    '**/node_modules/**'
+  ],
 
   timeout: 60000,
 
@@ -12,18 +22,17 @@ export default defineConfig({
 
   fullyParallel: false,
 
-  retries: 0,
+  retries: 1,
 
   workers: 1,
 
   reporter: [
-    ['dot'],
     ['html'],
     ['list']
   ],
 
   use: {
-    baseURL: 'http://127.0.0.1:4200',
+    baseURL: 'http://localhost:4200',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -31,12 +40,10 @@ export default defineConfig({
   },
 
   webServer: {
-    command: 'npm start',
-    url: 'http://127.0.0.1:4200',
-    reuseExistingServer: false,
-    timeout: 300000,
-    stdout: 'pipe',
-    stderr: 'pipe'
+    command: 'npm start -- --host 0.0.0.0',
+    url: 'http://localhost:4200',
+    reuseExistingServer: true,
+    timeout: 180000
   },
 
   projects: [
