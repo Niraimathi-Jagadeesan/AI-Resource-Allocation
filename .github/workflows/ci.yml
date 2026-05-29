@@ -123,6 +123,11 @@ jobs:
         working-directory: ResourceAllocation.API
         run: dotnet run --urls=http://localhost:5000 &
 
+      - name: Show API Logs
+        run: |
+          sleep 10
+          curl http://localhost:5000/swagger/index.html
+
       # -----------------------------
       # Wait for API
       # -----------------------------

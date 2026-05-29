@@ -40,9 +40,9 @@ export default defineConfig({
   },
 
   webServer: {
-    command: 'npm start -- --host 0.0.0.0',
+    command: 'npm run start:ci',
     url: 'http://127.0.0.1:4200',
-    reuseExistingServer: true,
+    reuseExistingServer: false,
     timeout: 180000
   },
 
