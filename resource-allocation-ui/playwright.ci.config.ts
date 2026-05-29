@@ -32,7 +32,7 @@ export default defineConfig({
   ],
 
   use: {
-    baseURL: 'http://localhost:4200',
+    baseURL: 'http://127.0.0.1:4200',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
@@ -41,7 +41,7 @@ export default defineConfig({
 
   webServer: {
     command: 'npm start -- --host 0.0.0.0',
-    url: 'http://localhost:4200',
+    url: 'http://127.0.0.1:4200',
     reuseExistingServer: true,
     timeout: 180000
   },
